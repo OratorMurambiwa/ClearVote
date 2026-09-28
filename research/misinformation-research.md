@@ -16,18 +16,18 @@ This is a structured desk review of primary sources: official product documentat
 
 No paid accounts were opened, APIs benchmarked, browser extensions installed, or detector models run. Prices, quotas, permissions, retention policies, language coverage, and live availability must be checked before integration. ClaimBuster's main application page did not load during this review; its role is supported by its university's research descriptions, not a successful service test.
 
-The repository does not specify a target election jurisdiction or language. English is a reasonable proposed first pilot language, subject to team agreement; this report does not assume a US-only audience. Detailed API procurement, model selection, and dataset implementation remain with the teammates assigned those tasks in [team roles](../docs/team-roles.md).
+The repository does not specify a target election jurisdiction or language. English is a reasonable proposed first pilot language, subject to team agreement. Detailed API procurement, model selection, and dataset implementation remain with the teammates assigned those tasks in [team roles](../docs/team-roles.md).
 
 ## 3. Separate the questions being answered
 
-| Question | Relevant approach | What its result does not establish |
-| --- | --- | --- |
-| Is this a checkable factual statement? | Claim detection and prioritization | That it is false or harmful |
-| Has this claim already been investigated? | Claim matching | That a similar-looking claim has identical meaning |
-| Does reliable evidence support it? | Evidence retrieval and verification | Certainty beyond the evidence's scope and date |
-| Does this publisher follow credible practices? | Source assessment | Truth or falsity of every individual statement |
-| Was this media generated or manipulated? | Forensic detection and watermark detection | Whether its accompanying factual claim is true |
-| What is known about this file's history? | Signed provenance | That the depicted event happened as described |
+| Question | Relevant approach | What its result can establish | What its result does not establish |
+| --- | --- | --- | --- |
+| Is this a checkable factual statement? | Claim detection and prioritization | Identifies statements that can potentially be checked against evidence and prioritized for review. | That it is false or harmful. |
+| Has this claim already been investigated? | Claim matching | Finds potentially relevant previous investigations; a verified match can support reuse of their findings within the same context. | That a similar-looking claim has identical meaning. |
+| Does reliable evidence support it? | Evidence retrieval and verification | Supports an assessment that the claim is supported, contradicted, or unresolved by the available evidence. | Certainty beyond the evidence’s scope and date. |
+| Does this publisher follow credible practices? | Source assessment | Provides evidence of how the publisher meets defined editorial and transparency criteria, helping users assess its reliability. | Truth or falsity of every individual statement. |
+| Was this media generated or manipulated? | Forensic detection and watermark detection | Provides signals of possible generation or manipulation; a validated watermark can indicate use of a participating generation system. | Whether its accompanying factual claim is true. |
+| What is known about this file’s history? | Signed provenance | Can authenticate signed records about the file’s origin and editing history and check whether the content matches those records. | That the depicted event happened as described. |
 
 For this report, misinformation means false or misleading information; calling something deliberate disinformation additionally requires evidence about intent. ClearVote should assess the content without guessing the author's motives. Opinion, satire, predictions, and factual assertions need different treatment. A real photograph can carry a false caption; an AI-generated illustration can accompany an accurate article. These distinctions should determine both the system design and the wording users see.
 
