@@ -36,7 +36,7 @@
 * **Existing tools / fact-checking research:** Henry
 * **APIs, models, and datasets:** Vensen & Orator
 * **AI model selection and testing:** Tatenda
-* **Privacy, ethics, and social-media considerations:** Tatenda
+* **Privacy, ethics, and social-media considerations:** Tadiwa
 * **Digital well-being research:** To be assigned
 
 ## Shared Responsibility
