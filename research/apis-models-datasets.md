@@ -136,3 +136,47 @@ Do not lock in FastAPI, Gemini, GDELT, DeBERTa, or any other final stack choice 
 9. AVeriTeC — https://fever.ai/dataset/averitec.html
 10. FEVER — https://fever.ai/dataset/fever.html
 11. FakeNewsNet — https://github.com/KaiDMML/FakeNewsNet
+
+## Benchmarking Plan
+
+Use this section when completing Milestone 2 benchmarking tasks.  
+All candidates within the same benchmark should be tested on the same examples whenever possible.
+
+| Benchmark | Candidates | Measure |
+|---|---|---|
+| Political-content detection | BART-large-MNLI, DeBERTa-v3 zero-shot, nli-deberta-v3-base | Precision, recall, F1, false positives, latency |
+| Check-worthy claim detection | BERT ClaimBuster, mDeBERTa ClaimBuster, LLM claim extraction | Precision, recall, F1, extraction quality, false positives, latency, cost |
+| Live evidence retrieval | GDELT, Tavily; Brave/Exa if needed | Relevant-result rate, coverage, recency, latency, API limits, estimated cost |
+| Claim-to-evidence matching | MiniLM, E5-small-v2, BGE-small-en-v1.5 | Correct evidence ranking, Precision@K, Recall@K, similarity threshold behavior, latency |
+| Evidence verification | DeBERTa-FEVER-ANLI, RoBERTa-MNLI, evidence-grounded LLM | Accuracy, precision, recall, F1, false confident answers, latency, cost |
+| LLM explanation | Gemini Flash, GPT-4.1 mini, Claude Haiku | Evidence groundedness, citation support, structured-output reliability, latency, cost |
+| AI runtime/provider | Local Hugging Face inference vs shortlisted hosted APIs | Model support, latency, CPU/GPU/RAM requirements, reliability, cost, integration effort |
+| Fact-check/evidence quality | Google Fact Check plus selected live retrieval APIs | Coverage, relevance, recency, source quality, no-result rate, latency |
+
+### Shared Evaluation Data
+
+Use:
+- AVeriTeC for evidence-based verification
+- FEVER for claim/evidence verification
+- ClaimBuster data for claim-detection testing
+- LIAR for additional political-claim examples
+- A small manually reviewed set of current political examples
+
+### Required Benchmark Output
+
+Each benchmark should produce a short comparison table containing:
+
+| Candidate | Main Quality Metric | Latency | Cost / Compute | Important Failure | Recommendation |
+|---|---:|---:|---:|---|---|
+
+The person completing the benchmark should recommend one option for the MVP and briefly explain why.
+
+### Benchmarking Rules
+
+- Test candidates on the same examples.
+- Record model/API version used.
+- Record important configuration or thresholds.
+- Do not select a model using accuracy alone.
+- Track false positives and false confident answers.
+- Record cases where the system correctly abstains.
+- Keep raw benchmark results so another team member can reproduce the comparison.
