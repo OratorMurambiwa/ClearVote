@@ -8,8 +8,15 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["src/content.js"]
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/VisibleTextExtractor.js",
+        "src/content.js"
+      ],
+      "run_at": "document_idle"
     }
   ],
   "permissions": []
