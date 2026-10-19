@@ -1,0 +1,1 @@
+console.log("ClearVote content script loaded.");

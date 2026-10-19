@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "ClearVote",
+  "version": "0.1.0",
+  "description": "ClearVote helps users review political and civic claims using evidence-based analysis.",
+  "action": {
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content.js"]
+    }
+  ],
+  "permissions": []
+}
