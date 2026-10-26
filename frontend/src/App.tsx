@@ -1,9 +1,12 @@
-import Button from "./components/Button";
-import Card from "./components/Card";
-import ErrorState from "./components/ErrorState";
-import LoadingState from "./components/LoadingState";
-import SourceCard from "./components/SourceCard";
-import StatusBadge from "./components/StatusBadge";
+import {
+    Button,
+    Card,
+    ErrorState,
+    LoadingState,
+    SourceCard,
+    StatusBadge,
+} from "./components";
+
 
 export default function App() {
     return (
