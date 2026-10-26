@@ -58,3 +58,76 @@ p {
 .clearvote-muted {
     color: var(--color-text-secondary);
 }
+
+.clearvote-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+
+    min-height: 36px;
+    padding: 10px 16px;
+
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.clearvote-button-primary {
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+.clearvote-button-primary:hover {
+    background: var(--color-primary-hover);
+}
+
+.clearvote-button-secondary {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.clearvote-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.clearvote-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.clearvote-status-warning {
+    background: var(--color-warning-background);
+    color: var(--color-warning);
+}
+
+.clearvote-status-success {
+    background: var(--color-success-background);
+    color: var(--color-success);
+}
+
+.clearvote-status-error {
+    background: var(--color-error-background);
+    color: var(--color-error);
+}
+
+.clearvote-status-neutral {
+    background: var(--color-surface-secondary);
+    color: var(--color-text-secondary);
+}
