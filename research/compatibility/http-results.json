@@ -1,0 +1,17 @@
+{
+  "python": "3.12.3",
+  "packages": {
+    "fastapi": "0.162.0",
+    "uvicorn": "0.54.0",
+    "httpx": "0.28.1",
+    "tavily-python": "0.8.5"
+  },
+  "asgi_health_spike": "passed (replicated scaffold route, not imported PR)",
+  "httpx_fixtures": "passed: claim response, empty result, 429, timeout",
+  "tavily_sdk_import": "passed; no authenticated call performed",
+  "gdelt_live": {
+    "error_type": "HTTPStatusError",
+    "note": "Availability failure; no quality conclusion",
+    "status": 429
+  }
+}
