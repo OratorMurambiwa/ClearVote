@@ -1,0 +1,50 @@
+{
+  "python": "3.12.3",
+  "threads": 2,
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "transformers": "5.22.0",
+    "sentence-transformers": "6.2.0"
+  },
+  "models": [
+    {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "load_seconds_including_download": 16.969,
+      "status": "passed",
+      "shape": [
+        2,
+        384
+      ],
+      "encode_seconds": 0.012,
+      "max_seq_length": 256,
+      "process_peak_rss_kib_cumulative": 534144
+    },
+    {
+      "model": "intfloat/e5-small-v2",
+      "revision": "ffb93f3bd4047442299a41ebb6fa998a38507c52",
+      "load_seconds_including_download": 18.35,
+      "status": "passed",
+      "shape": [
+        2,
+        384
+      ],
+      "encode_seconds": 0.026,
+      "max_seq_length": 512,
+      "process_peak_rss_kib_cumulative": 618104
+    },
+    {
+      "model": "BAAI/bge-small-en-v1.5",
+      "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+      "load_seconds_including_download": 16.092,
+      "status": "passed",
+      "shape": [
+        2,
+        384
+      ],
+      "encode_seconds": 0.022,
+      "max_seq_length": 512,
+      "process_peak_rss_kib_cumulative": 731116
+    }
+  ]
+}
