@@ -2,6 +2,24 @@
 
 Carnegie Young Leaders Fellowship 2026–2027 project to help identify political misinformation, AI-generated content, and deepfakes while promoting informed digital engagement.
 
+## Getting Started
+
+ClearVote is in early development. You can load the browser extension shell and run the backend text-preprocessing tests. The extension currently shows a placeholder popup and extracts up to 5,000 characters of page text locally, logging only the extracted length. A backend API server and the full claim-analysis flow are not implemented yet.
+
+Clone the repository with Git and enter its root directory:
+
+```bash
+git clone https://github.com/OratorMurambiwa/ClearVote.git
+cd ClearVote
+```
+
+Follow the component guides:
+
+- [Browser extension setup and verification](extension/README.md) — requires Google Chrome; no build step or package installation.
+- [Backend setup and tests](backend/README.md) — requires Python 3; uses the standard library only.
+
+No API keys or environment variables are needed for these steps. The [Analyze API contract](docs/api-contract.md) describes the planned integration, and the [Milestone 2 checklist](docs/milestone-2.md) defines the intended end-to-end behavior.
+
 ## Contributing
 
 ### Finding Your Tasks
