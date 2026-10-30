@@ -1,0 +1,223 @@
+@import "./tokens.css";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-primary);
+    background: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+body {
+    min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+.clearvote-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.clearvote-label {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.clearvote-muted {
+    color: var(--color-text-secondary);
+}
+
+.clearvote-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+
+    min-height: 36px;
+    padding: 10px 16px;
+
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.clearvote-button-primary {
+    background: var(--color-primary);
+    color: var(--color-primary-text);
+}
+
+.clearvote-button-primary:hover {
+    background: var(--color-primary-hover);
+}
+
+.clearvote-button-secondary {
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.clearvote-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.clearvote-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 14px;
+    border-radius: var(--radius-pill);
+
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.clearvote-status-warning {
+    background: var(--color-warning-background);
+    color: var(--color-warning);
+}
+
+.clearvote-status-success {
+    background: var(--color-success-background);
+    color: var(--color-success);
+}
+
+.clearvote-status-error {
+    background: var(--color-error-background);
+    color: var(--color-error);
+}
+
+.clearvote-status-neutral {
+    background: var(--color-surface-secondary);
+    color: var(--color-text-secondary);
+}
+
+.clearvote-source-card {
+    padding: 18px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.clearvote-source-title {
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.clearvote-source-meta {
+    margin-bottom: var(--space-3);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.clearvote-source-summary {
+    margin-bottom: var(--space-4);
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+.clearvote-source-link {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+}
+
+.clearvote-source-link:hover {
+    text-decoration: underline;
+}
+
+.clearvote-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+
+    padding: var(--space-8);
+    text-align: center;
+
+    color: var(--color-text-secondary);
+}
+
+.clearvote-state h3 {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+}
+
+.clearvote-state p {
+    max-width: 420px;
+    line-height: 1.5;
+}
+
+.clearvote-error-state {
+    background: var(--color-error-background);
+    border: 1px solid var(--color-error);
+    border-radius: var(--radius-md);
+}
+
+.clearvote-spinner {
+    width: 28px;
+    height: 28px;
+
+    border: 3px solid var(--color-border);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+
+    animation: clearvote-spin 0.8s linear infinite;
+}
+
+@keyframes clearvote-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .clearvote-spinner {
+        animation: none;
+    }
+}
