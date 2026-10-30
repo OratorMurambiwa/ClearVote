@@ -13,10 +13,3 @@ From the project root:
 
 ```powershell
 pip install -r backend\requirements.txt
-
-## Environment Configuration
-
-`backend/.env.example` documents the environment variables used by the backend.
-
-
-
