@@ -1,6 +1,8 @@
 # ClearVote MVP — APIs, Models, and Datasets Research
 **Research period:** September–October 2026
 
+Issue #10 implementation checks and remaining prerequisites are tracked in the [backend compatibility assessment](compatibility/README.md). Its findings are provisional and do not replace the quality benchmarks below.
+
 ## 1. MVP Direction
 ClearVote should use an evidence-based pipeline instead of one model deciding whether political content is true or false.
 
